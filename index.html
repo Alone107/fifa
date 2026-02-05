@@ -21,15 +21,22 @@
         }
 
         #container {
-            position: fixed;
-            top: 50%;
-            left: 95%;
-            transform: translate(-100%, -50%);
-            z-index: 100
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+            z-index: 100;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
         #info {
-            width: 45vw;
+            width: auto;
+            padding-right: 20px;
             z-index: 100
         }
 
@@ -95,11 +102,12 @@
         }
 
         .underneath {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 60vw;
+            position: relative;
+            top: auto;
+            left: auto;
+            width: auto;
             height: 100%
+            
         }
 
         .underneath-img {
@@ -121,35 +129,22 @@
             height: 100%
         }
 
-        @media only screen and (max-width: 1400px) {
-            body {
-                font-size: 13px
-            }
-#container {
-left: 95% !important;
-}
-            #info {
-                width: 40vw
-            }
-
-            .underneath {
-                width: 50vw
-            }
-        }
+     
 
         @media only screen and (max-width: 1024px) {
             body {
                 font-size: 12px
             }
-#container {
-left: 90% !important;
-}
-            #info {
-                width: 55vw
-            }
+
+          
 
             .underneath {
-                width: 30vw
+                width: 30vw;
+                flex-shrink:0;
+            }
+            .underneath-img {
+                width: 100%;
+                object-fit: contain;
             }
         }
 
@@ -174,6 +169,10 @@ left: 50% !important;
                 display: none;
             }
 
+             #info {
+                padding-right: 0;
+            }
+
             body {
                 background-image: url(../fifa/index.jpg);
                 background-repeat: no-repeat;
@@ -192,13 +191,19 @@ left: 50% !important;
         min-height: 100vh;
         display: flex;
         align-items: center;
+        justify-content: center;
+        width: 100%;
             }
         }
 
     </style>
 </head>
 <body>
-<div id="container">
+<div class="wrapper">
+    <div class="underneath">
+    <img src="index.jpg" class="underneath-img" alt="">
+    </div>
+    <div id="container">
     <div id="info"><h1>Сайт FIFAMANAGER.RU закрыт, скорее всего, навсегда...<span>в ваших сердцах.<span></span></h1>
         <h2>Спасибо за то, что были вместе с нами!</h2>
         <p class="description">Сайт FIFA MANAGER.RU был посвящен компьютерной игре FIFA Manager, которая выходила с 1997 года под названием FIFA Soccer Manager. Разработчиком была компания DICE Computer Games, а издателем выступала компания Electronic Arts (EA Sports).
@@ -208,9 +213,7 @@ left: 50% !important;
         </p>
         <h3>Футбол – простая игра. В ней 22 человека 90 минут бегают за мячом!<br/> &copy; Гари Линекер</h3>
         <p class="copyright">2007&mdash;2014 &copy; <strong>WWW.FIFAMANAGER.RU</strong></p></div>
-</div>
-<div class="underneath">
-    <div class="underneath-img"></div>
+    </div>
 </div>
 </body>
 </html>
