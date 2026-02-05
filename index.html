@@ -55,7 +55,7 @@
 
         h2 {
             display: block;
-            margin: 0 -20px;
+            margin: 0 0px;
             padding: 7px 20px;
             background-color: #0087ce;
             color: #fff;
@@ -129,6 +129,17 @@
             height: 100%
         }
 
+        .img-mobile {
+            display: none;
+            width: 100%;
+            object-fit: contain;
+        }
+
+           .img-mobile img {
+            width: 100%;
+            object-fit: contain;
+        }
+
      
 
         @media only screen and (max-width: 1024px) {
@@ -169,6 +180,10 @@ left: 50% !important;
                 display: none;
             }
 
+            .img-mobile {
+                display: block;
+            }
+
              #info {
                 padding-right: 0;
             }
@@ -204,7 +219,15 @@ left: 50% !important;
     <img src="index.jpg" class="underneath-img" alt="">
     </div>
     <div id="container">
-    <div id="info"><h1>Сайт FIFAMANAGER.RU закрыт, скорее всего, навсегда...<span>в ваших сердцах.<span></span></h1>
+
+     
+
+    <div id="info">
+           <div class="img-mobile">
+            <img src="index.jpg" alt="">
+        </div>
+        
+        <h1>Сайт FIFAMANAGER.RU закрыт, скорее всего, навсегда...<span>в ваших сердцах.<span></span></h1>
         <h2>Спасибо за то, что были вместе с нами!</h2>
         <p class="description">Сайт FIFA MANAGER.RU был посвящен компьютерной игре FIFA Manager, которая выходила с 1997 года под названием FIFA Soccer Manager. Разработчиком была компания DICE Computer Games, а издателем выступала компания Electronic Arts (EA Sports).
 В 1998 году игра вышла под названием The F.A. Premier League Football Manager 99. В 2002 году игра снова сменила название на Total Club Manager. В 2005 году игра в очередной раз сменила свое название на FIFA Manager. С этого момента разработкой игры занималась компания Bright Future GmbH. В ноябре 2013 года было объявлено FIFA Manager 14 последняя игра серии.</p>
